@@ -1,0 +1,16 @@
+<% tooltip = true unless local_assigns.has_key?(:tooltip) %>
+<button class="d-author"
+  <% if tooltip %>
+    data-tooltip
+    data-position="top"
+    data-alignment="center"
+    data-click-open="true"
+    data-keep-on-hover="true"
+    data-allow-html="true"
+    data-template-classes="d-tooltip light-alt"
+    data-tip-text='<%= partial "d_tooltip" %>'
+    tabindex="1"
+    aria-haspopup="true"
+  <% end %>>
+  <img src="<%= Faker::LoremFlickr.image(size: "50x50") %>" alt="Author: <%= Faker::Name.name %>">
+</button>

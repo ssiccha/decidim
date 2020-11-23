@@ -1,0 +1,12 @@
+<div class="d-tooltip__header">
+  <img src="<%= Faker::LoremFlickr.image(size: "50x50") %>" alt="<%= Faker::Name.name %>">
+  <%= Faker::Name.name %>
+</div>
+<div class="d-tooltip__info">
+<span class="d-tooltip__data">
+  <strong><%= Faker::Number.between(from: 1, to: 100) %></strong> Followers
+</span>
+<span class="d-tooltip__data">
+  <strong><%= Faker::Number.between(from: 1, to: 100) %></strong> Following
+</span>
+</div>

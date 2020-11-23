@@ -1,0 +1,153 @@
+// D-cards are a redesign of the previous Decidim cards
+$d-card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$d-card-bg: #fff;
+$d-card-radius: 4px;
+$d-card-padding: 1rem;
+$d-card-footer-color: $muted;
+$d-card-icon-color: $medium-gray;
+$d-card-data-color: $muted;
+
+.d-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: $d-card-bg;
+  border-radius: $d-card-radius;
+  box-shadow: $d-card-shadow;
+  position: relative;
+
+  a {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__image {
+    border-radius: $d-card-radius $d-card-radius 0 0;
+    overflow: hidden;
+  }
+
+  &__content {
+    padding: $d-card-padding;
+  }
+
+  & &__main-link {
+    position: static;
+    display: inline-block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 0;
+    }
+  }
+
+  &__pre-title {
+    color: $primary-color;
+    font-size: 80%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  &__title {
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &__data {
+    font-size: $small-font-size;
+    color: $d-card-data-color;
+    display: flex;
+    margin-top: -0.3rem;
+    margin-bottom: 1rem;
+
+    svg {
+      color: $d-card-icon-color;
+      margin-right: 0.3em;
+    }
+  }
+
+  &__data-element {
+    display: flex;
+    align-items: center;
+  }
+
+  &__data-element:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &__text {
+    margin-bottom: 1rem;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $d-card-padding $d-card-padding;
+    font-size: $small-font-size;
+    color: $d-card-footer-color;
+    margin-top: auto;
+  }
+
+  &__tags {
+    display: flex;
+    align-items: baseline;
+
+    a,
+    &.tags a {
+      display: block;
+    }
+
+    li,
+    &.tags li {
+      overflow: hidden;
+      padding: 3px;
+      margin-bottom: 0;
+
+      &:first-child {
+        flex-shrink: 0.5;
+      }
+    }
+
+    a {
+      display: block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: 100%;
+      white-space: nowrap;
+    }
+  }
+
+  &__meet-detail {
+    display: flex;
+    align-items: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: 0.3em;
+    }
+
+    svg {
+      margin-top: 0.3em;
+      margin-right: 0.3em;
+    }
+  }
+
+  &__highlight {
+    color: $primary-color;
+    font-weight: 600;
+  }
+
+  &__highlight-sc {
+    color: $primary-color;
+    font-size: 90%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,55 @@
+$d-tooltip-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+.d-tooltip {
+  max-width: 100%;
+
+  &__header {
+    white-space: nowrap;
+
+    img {
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      margin-top: -3px;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    font-size: $small-font-size;
+    margin-top: 0.5rem;
+  }
+
+  &__data {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
+
+  // Theme
+
+  &.light-alt {
+    background-color: $body-background;
+    color: $body-font-color;
+    border-radius: $global-radius;
+    filter: drop-shadow($d-tooltip-shadow);
+
+    &.top::before {
+      border-color: $body-background transparent transparent;
+    }
+
+    &.bottom::before {
+      border-color: transparent transparent $body-background;
+    }
+
+    &.left::before {
+      border-color: transparent transparent transparent $body-background;
+    }
+
+    &.right::before {
+      border-color: transparent $body-background transparent transparent;
+    }
+  }
+}

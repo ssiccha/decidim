@@ -1,0 +1,29 @@
+// D-status are a redesign of the previous Decidim status labels
+$status-success-color: $success;
+$status-success-bg: lighten($success, 37);
+$status-fail-color: $alert;
+$status-fail-bg: lighten($status-fail-color, 37);
+
+.d-status {
+  display: inline-block;
+  border: 1px solid;
+  border-radius: $global-radius / 2;
+  padding: 0.15em 0.5em 0.2em;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  font-size: 70%;
+
+  &--success {
+    color: darken($status-success-color, 30);
+    border-color: $status-success-color;
+    background-color: $status-success-bg;
+  }
+
+  &--fail {
+    color: darken($status-fail-color, 20);
+    border-color: $status-fail-color;
+    background-color: $status-fail-bg;
+  }
+}

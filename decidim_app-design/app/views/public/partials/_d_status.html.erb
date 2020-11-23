@@ -1,0 +1,19 @@
+<% if locals[:status] == 'accepted' %>
+  <span class="d-status d-status--success">
+    <% if locals[:customMessage] %>
+      <%= locals[:customMessage] %>
+    <% else %>
+      Accepted
+    <% end %>
+  </span>
+<% end %>
+
+<% if locals[:status] == 'rejected' %>
+  <span class="d-status d-status--fail">
+    <% if locals[:customMessage] %>
+      <%= locals[:customMessage] %>
+    <% else %>
+      Rejected
+    <% end %>
+  </span>
+<% end %>

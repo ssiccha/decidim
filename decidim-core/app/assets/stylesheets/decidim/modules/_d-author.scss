@@ -1,0 +1,14 @@
+// D-author is a redesign of the previous Decidim author component
+
+.d-author {
+  &[data-toggle] {
+    margin-bottom: 0;
+  }
+  img {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -3px;
+    object-fit: cover;
+  }
+}

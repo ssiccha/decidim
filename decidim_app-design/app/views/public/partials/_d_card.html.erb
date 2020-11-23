@@ -1,0 +1,94 @@
+<article class="d-card">
+  <% if locals[:image] %>
+    <div class="d-card__image">
+      <img src="<%= Faker::LoremFlickr.image(size: "400x150") %>" alt="">
+    </div>
+  <% end %>
+  <div class="d-card__content">
+    <% if locals[:preTitle] %>
+      <div class="d-card__pre-title"><%= locals[:preTitle] %></div>
+    <% end %>
+    <h5 class="d-card__title">
+      <a href="#" class="d-card__main-link"><%= Faker::Movies::StarWars.quote[0..50] %></a>
+    </h5>
+    <div class="d-card__data">
+      <% if !locals[:process] %>
+        <div class="d-card__data-element">
+          <%= icon "comment-square" %> 23 Comments
+        </div>
+      <% end %>
+      <div class="d-card__data-element">
+        <%= icon "bell" %> 126 Followers
+      </div>
+    </div>
+    <% if locals[:status] %>
+      <%= partial "d_status", locals:{status: locals[:status], customMessage: locals[:customMessage]}  %>
+    <% end %>
+    <% if locals[:process] %>
+      <div class="d-card__text">
+        <%= Faker::Hipster.paragraph_by_chars(characters: 140) %>
+      </div>
+    <% end %>
+    <% if !locals[:process] %>
+      <div class="d-card__text">
+        <%= Faker::Hipster.paragraph_by_chars(characters: 80) %>
+      </div>
+      <%= partial "d_card_tags" %>
+    <% end %>
+
+    <% if locals[:initiative] %>
+      <div class="d-card__initiative-progress">
+        <div class="d-card__progress-labels">
+          12,000 signatures
+          15,000 signatures
+        </div>
+        <div class="progress__bar">
+          <div class="progress progress__bar__bar" role="progressbar" tabindex="0" aria-valuenow="50%" aria-valuemin="0" aria-valuetext="50% percent" aria-valuemax="100">
+            <div class="progress-meter progress__bar__bar--complete" style="width: 50%"></div>
+            <div class="progress__bar__bar--incomplete" style="width:calc(100% - 50%);"></div>
+          </div>
+        </div>
+        <div class="d-card__progress-foot">
+          <%= icon "clock" %>
+          <% if !locals[:initiativeEnd] %>
+            quedan 12 días
+          <% else %>
+            iniciativa finalizada
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+    <% if locals[:initiative] && !locals[:initiativeEnd] %>
+      <button class="button secondary small expanded">Firma la iniciativa</button>
+    <% end %>
+  </div>
+  <div class="d-card__footer">
+    <% if !locals[:process] && !locals[:meetup] %>
+      03/02/2020
+      <%= partial "d_author" %>
+    <% end %>
+    <% if locals[:process] %>
+      <div>
+        <h6 class="mini-title">Current phase</h6>
+        <div>Diagnosis and collection of proposals</div>
+      </div>
+    <% end %>
+    <% if locals[:meetup] %>
+      <div class="d-card__meet">
+        <div class="d-card__meet-detail">
+          <%= icon "clock" %>
+          <div>
+            <span class="d-card__highlight">11/03/2020</span> 18:30 - 21:00
+          </div>
+        </div>
+        <div class="d-card__meet-detail">
+          <%= icon "pin" %>
+          <div>
+            <div class="d-card__highlight-sc">Casa Elizalde</div>
+            Carrer de València, 302, 08009 Barcelona
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</article>
