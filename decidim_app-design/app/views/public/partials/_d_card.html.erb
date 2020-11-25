@@ -14,11 +14,11 @@
     <div class="d-card__data">
       <% if !locals[:process] %>
         <div class="d-card__data-element">
-          <%= icon "comment-square" %> 23 Comments
+          <%= external_icon "icons/solid/comment.svg", role: "img", "aria-hidden": true %> 23 Comments
         </div>
       <% end %>
       <div class="d-card__data-element">
-        <%= icon "bell" %> 126 Followers
+        <%= external_icon "icons/solid/bell.svg", role: "img", "aria-hidden": true %> 126 Followers
       </div>
     </div>
     <% if locals[:status] %>
@@ -49,7 +49,7 @@
           </div>
         </div>
         <div class="d-card__progress-foot">
-          <%= icon "clock" %>
+          <%= external_icon "icons/regular/clock.svg", role: "img", "aria-hidden": true %>
           <% if !locals[:initiativeEnd] %>
             quedan 12 días
           <% else %>
@@ -76,13 +76,13 @@
     <% if locals[:meetup] %>
       <div class="d-card__meet">
         <div class="d-card__meet-detail">
-          <%= icon "clock" %>
+          <%= external_icon "icons/regular/clock.svg", role: "img", "aria-hidden": true %>
           <div>
             <span class="d-card__highlight">11/03/2020</span> 18:30 - 21:00
           </div>
         </div>
         <div class="d-card__meet-detail">
-          <%= icon "pin" %>
+          <%= external_icon "icons/solid/map-marker-alt.svg", role: "img", "aria-hidden": true %>
           <div>
             <div class="d-card__highlight-sc">Casa Elizalde</div>
             Carrer de València, 302, 08009 Barcelona
