@@ -1,12 +1,19 @@
 // D-cards are a redesign of the previous Decidim cards
+$muted: #767676;
+
 $d-card-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
 $d-card-bg: #fff;
 $d-card-radius: 4px;
 $d-card-padding: 1rem;
-$d-card-footer-color: $muted;
-$d-card-icon-color: $medium-gray;
+$d-card-icon-color: lighten($muted, 30);
 $d-card-data-color: $muted;
+$d-card-data-size: .75rem;
+$d-card-footer-color: $muted;
+$d-card-footer-size: .875rem;
 $d-card-progress-foot-color: $muted;
+$d-card-text-size: .875rem;
+$d-card-tags-size: .875rem;
+$d-card-progress-size: .875rem;
 
 .d-card{
   display: flex;
@@ -59,7 +66,7 @@ $d-card-progress-foot-color: $muted;
   }
 
   &__data{
-    font-size: $small-font-size;
+    font-size: $d-card-data-size;
     color: $d-card-data-color;
     display: flex;
     margin-top: -.3rem;
@@ -81,6 +88,7 @@ $d-card-progress-foot-color: $muted;
   }
 
   &__text{
+    font-size: $d-card-text-size;
     margin-bottom: 1rem;
   }
 
@@ -89,7 +97,7 @@ $d-card-progress-foot-color: $muted;
     justify-content: space-between;
     align-items: center;
     padding: 0 $d-card-padding $d-card-padding;
-    font-size: $small-font-size;
+    font-size: $d-card-footer-size;
     color: $d-card-footer-color;
     margin-top: auto;
   }
@@ -97,6 +105,14 @@ $d-card-progress-foot-color: $muted;
   &__tags{
     display: flex;
     align-items: baseline;
+
+    &.tags{
+      font-size: $d-card-tags-size;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
 
     a,
     &.tags a{
@@ -132,6 +148,7 @@ $d-card-progress-foot-color: $muted;
     }
 
     svg{
+      color: $d-card-icon-color;
       margin-top: .3em;
       margin-right: .3em;
     }
@@ -152,6 +169,7 @@ $d-card-progress-foot-color: $muted;
     display: flex;
     justify-content: space-between;
     font-weight: 600;
+    font-size: $d-card-progress-size;
   }
 
   &__progress-label-text{
@@ -166,6 +184,7 @@ $d-card-progress-foot-color: $muted;
 
     svg{
       margin-right: .3em;
+      color: $d-card-icon-color;
     }
   }
 
