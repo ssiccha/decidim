@@ -259,6 +259,18 @@ $map: map-merge(
   display: inline-block;
 }
 
+@mixin smallcaps($size: .9em, $weight: 600){
+  text-transform: uppercase;
+  font-weight: $weight;
+  letter-spacing: .01em;
+  font-size: $size;
+}
+
+.text-sc{
+  @include smallcaps;
+}
+
+
 /* HTML inline text elements. Modifiers color text */
 a,
 abbr,

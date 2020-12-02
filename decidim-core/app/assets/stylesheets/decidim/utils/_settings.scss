@@ -77,11 +77,13 @@ $foundation-palette: (
 );
 $light-gray: #fafafa;
 $medium-gray: #e8e8e8;
+$light-gray-dark: darken($light-gray, 2.5) !default;
+$light-gray-darker: darken($light-gray, 5) !default;
 $dark-medium-gray: #3d393c;
 $dark-gray: #2c2930;
 $black: #1a181d;
 $white: #fff;
-$light-gray-dark: darken($light-gray, 2.5) !default;
+
 $body-background: $light-gray;
 $body-font-color: #3d393c;
 $muted: lighten($body-font-color, 20) !default;
@@ -471,7 +473,7 @@ $select-background: $white;
 $select-triangle-color: $dark-gray;
 $select-radius: $global-radius;
 $input-color: $black;
-$input-placeholder-color: $medium-gray;
+$input-placeholder-color: $dark-medium-gray;
 $input-multiple-placeholder-color: $dark-medium-gray;
 $input-font-family: inherit;
 $input-font-size: rem-calc(16);

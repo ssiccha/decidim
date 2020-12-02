@@ -48,11 +48,9 @@ $d-card-progress-foot-color: $muted;
 
   &__pre-title{
     color: $primary-color;
-    font-size: 80%;
-    letter-spacing: .01em;
-    text-transform: uppercase;
-    font-weight: 600;
     margin-bottom: 0;
+
+    @include smallcaps($size: .8em);
   }
 
   &__title{
@@ -146,10 +144,8 @@ $d-card-progress-foot-color: $muted;
 
   &__highlight-sc{
     color: $primary-color;
-    font-size: 90%;
-    letter-spacing: .01em;
-    text-transform: uppercase;
-    font-weight: 600;
+
+    @include smallcaps;
   }
 
   &__progress-labels{
@@ -159,10 +155,7 @@ $d-card-progress-foot-color: $muted;
   }
 
   &__progress-label-text{
-    font-weight: 400;
-    letter-spacing: .01em;
-    text-transform: uppercase;
-    font-size: $small-font-size;
+    @include smallcaps($weight: 400);
   }
 
   &__progress-foot{
