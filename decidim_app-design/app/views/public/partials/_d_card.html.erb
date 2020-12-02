@@ -39,8 +39,8 @@
     <% if locals[:initiative] %>
       <div class="d-card__initiative-progress">
         <div class="d-card__progress-labels">
-          12,000 signatures
-          15,000 signatures
+          <span>12,000 <span class="d-card__progress-label-text">signatures</span></span>
+          <span>15,000 <span class="d-card__progress-label-text">signatures</span></span>
         </div>
         <div class="progress__bar">
           <div class="progress progress__bar__bar" role="progressbar" tabindex="0" aria-valuenow="50%" aria-valuemin="0" aria-valuetext="50% percent" aria-valuemax="100">
@@ -51,15 +51,15 @@
         <div class="d-card__progress-foot">
           <%= external_icon "icons/regular/clock.svg", role: "img", "aria-hidden": true %>
           <% if !locals[:initiativeEnd] %>
-            quedan 12 días
+            12 days left
           <% else %>
-            iniciativa finalizada
+            initiative completed
           <% end %>
         </div>
       </div>
     <% end %>
     <% if locals[:initiative] && !locals[:initiativeEnd] %>
-      <button class="button secondary small expanded">Firma la iniciativa</button>
+      <button class="button secondary small expanded d-card__cta">Sign the initiative</button>
     <% end %>
   </div>
   <div class="d-card__footer">
