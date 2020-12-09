@@ -622,6 +622,8 @@ ca:
         new:
           create: Crear
           title: Nova participant de l'espai de participació privat.
+        share:
+          success: Token per formar part amb participació privada creat correctament.
       participatory_space_private_users_csv_imports:
         create:
           invalid: S'ha produït un error en llegir el fitxer CSV.
@@ -679,6 +681,12 @@ ca:
         destroy:
           error: S'ha produït un error en eliminar aquest token.
           success: El token s'ha eliminat correctament.
+        private_users_share_tokens:
+          help: Aquests tokens s'empren per compartir aquest espai privat amb qualsevol persona. Els usuaris que facin servir l'URL seran afegits automàticament a la llista de participants privats. Fes click a la icona per copiar la URL.
+          new: nou token per compartir
+          share_token_help: Copia l'URL
+          sign_up_url: URL de registre per compartir
+          title: Tokens per participants privats
         share_tokens:
           empty: No hi ha tokens actius
           help: Aquests tokens s'utilitzen per a compartir públicament aquest recurs no publicat a qualsevol usuari. S'ocultaran quan es publiqui el recurs. Fes clic en la icona de compartir el token per a visitar la URL compartible.

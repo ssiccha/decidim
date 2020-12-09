@@ -622,6 +622,8 @@ es:
         new:
           create: Crear
           title: Nueva participante de espacio de participación privado.
+        share:
+          success: Token para formar parte con participación privada creado correctamente.
       participatory_space_private_users_csv_imports:
         create:
           invalid: Se ha producido un error al leer el archivo CSV.
@@ -679,6 +681,12 @@ es:
         destroy:
           error: Se ha producido un error al eliminar este token.
           success: Token eliminado correctamente.
+        private_users_share_tokens:
+          help: Estos tokens se emplean para compartir este espacio privado con cualquier persona. Los usuarios que usen la URL serán añadidos automáticamente a la lista de participantes privados. Haz click en el icono para copiar la URL.
+          new: Nuevo token para compartir
+          share_token_help: Copiar URL
+          sign_up_url: URL de registro para compartir
+          title: Tokens para participantes privados
         share_tokens:
           empty: No hay tokens activos
           help: Estos tokens se utilizan para compartir públicamente este recurso no publicado a cualquier usuario. Se ocultarán cuando se publique el recurso. Haz clic en el icono de compartir el token para visitar la URL compartible.
