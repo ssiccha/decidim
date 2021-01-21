@@ -9,6 +9,12 @@
       </div>
     </div>
 
+    <div class="row small-up-1 medium-up-2 mediumlarge-up-2 large-up-3 card-grid">
+      <div class="column">
+        <%= partial "d_card", locals: { image: true, preTitle: '13/02/2020 - 20/03/2021', ariaPreTitle: 'Duration dates' } %>
+      </div>
+    </div>
+
     <div class="row column">
       <h2 class="section-heading">Proposal/Initiative/card</h2>
     </div>
@@ -64,11 +70,37 @@
     </div>
 
     <div class="row column">
+      <h2 class="section-heading">Card with process origin (for disambiguation)</h2>
+    </div>
+    <div class="row small-up-1 medium-up-2 mediumlarge-up-2 large-up-3 card-grid">
+      <div class="column">
+        <%= partial "d_card", locals: { processOrigin: true } %>
+      </div>
+    </div>
+
+    <div class="row column">
+      <h2 class="section-heading">Card with relative date of creation</h2>
+    </div>
+    <div class="row small-up-1 medium-up-2 mediumlarge-up-2 large-up-3 card-grid">
+      <div class="column">
+        <%= partial "d_card", locals: { relativetDate: true } %>
+      </div>
+    </div>
+
+    <div class="row column">
       <h2 class="section-heading">Meetup card</h2>
     </div>
     <div class="row small-up-1 medium-up-2 mediumlarge-up-2 large-up-3 card-grid">
       <div class="column">
         <%= partial "d_card", locals: { meetup: true } %>
+      </div>
+    </div>
+    <div class="row column">
+      <h2 class="section-heading">Meetup card with autor</h2>
+    </div>
+    <div class="row small-up-1 medium-up-2 mediumlarge-up-2 large-up-3 card-grid">
+      <div class="column">
+        <%= partial "d_card", locals: { meetup: true, meetupAuthor: true } %>
       </div>
     </div>
 

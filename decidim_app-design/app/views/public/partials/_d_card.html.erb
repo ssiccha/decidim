@@ -65,10 +65,25 @@
     <% if locals[:initiative] && !locals[:initiativeEnd] %>
       <button class="button secondary small expanded d-card__cta">Sign the initiative</button>
     <% end %>
+
+    <% if locals[:processOrigin] %>
+      <div>
+        <h6 class="mini-title">Process</h6>
+        <a href="#" class="d-card__simple-text"><%= Faker::Movies::StarWars.quote[0..40] %></a>
+      </div>
+    <% end %>
+
   </div>
+
   <div class="d-card__footer">
     <% if !locals[:process] && !locals[:meetup] %>
-      <span aria-label="Creation date">03/02/2020</span>
+      <span aria-label="Creation date">
+        <% if !locals[:relativetDate] %>
+            03/02/2020
+          <% else %>
+            3 hours ago
+        <% end %>
+      </span>
       <%= partial "d_author" %>
     <% end %>
     <% if locals[:process] %>
@@ -93,6 +108,11 @@
           </div>
         </div>
       </div>
+      <% if locals[:meetupAuthor] %>
+        <div class="d-card__extra-footer">
+          <%= partial "d_author" %>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </article>

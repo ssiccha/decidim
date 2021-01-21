@@ -92,6 +92,10 @@ $d-card-progress-size: .875rem;
     margin-bottom: 1rem;
   }
 
+  &__simple-text{
+    font-size: $d-card-text-size;
+  }
+
   &__footer{
     display: flex;
     justify-content: space-between;
@@ -100,6 +104,13 @@ $d-card-progress-size: .875rem;
     font-size: $d-card-footer-size;
     color: $d-card-footer-color;
     margin-top: auto;
+  }
+
+  &__extra-footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-self: flex-end;
   }
 
   &__tags{
