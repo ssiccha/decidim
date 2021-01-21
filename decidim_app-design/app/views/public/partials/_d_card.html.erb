@@ -8,21 +8,23 @@
   <% end %>
   <div class="d-card__content">
     <% if locals[:preTitle] %>
-      <div class="d-card__pre-title"><%= locals[:preTitle] %></div>
+      <div class="d-card__pre-title" <% if locals[:ariaPreTitle] %> aria-label="<%= locals[:ariaPreTitle] %>" <% end %> ><%= locals[:preTitle] %></div>
     <% end %>
     <h5 class="d-card__title">
       <a href="#" class="d-card__main-link"><%= Faker::Movies::StarWars.quote[0..50] %></a>
     </h5>
-    <div class="d-card__data">
-      <% if !locals[:process] %>
+    <% if !locals[:meetup] %>
+      <div class="d-card__data">
+        <% if !locals[:process] %>
+          <div class="d-card__data-element">
+            <%= external_icon "icons/solid/comment.svg", role: "img", "aria-hidden": true %> 23 Comments
+          </div>
+        <% end %>
         <div class="d-card__data-element">
-          <%= external_icon "icons/solid/comment.svg", role: "img", "aria-hidden": true %> 23 Comments
+          <%= external_icon "icons/solid/bullhorn.svg", role: "img", "aria-hidden": true %> 126 Supports
         </div>
-      <% end %>
-      <div class="d-card__data-element">
-        <%= external_icon "icons/solid/bell.svg", role: "img", "aria-hidden": true %> 126 Followers
       </div>
-    </div>
+    <% end %>
     <% if locals[:status] %>
       <%= partial "d_status", locals:{status: locals[:status], customMessage: locals[:customMessage]}  %>
     <% end %>
@@ -66,7 +68,7 @@
   </div>
   <div class="d-card__footer">
     <% if !locals[:process] && !locals[:meetup] %>
-      03/02/2020
+      <span aria-label="Creation date">03/02/2020</span>
       <%= partial "d_author" %>
     <% end %>
     <% if locals[:process] %>
@@ -79,9 +81,9 @@
       <div class="d-card__meet">
         <div class="d-card__meet-detail">
           <%= external_icon "icons/solid/clock.svg", role: "img", "aria-hidden": true %>
-          <div>
+          <time aria-label="Meetup date"  datetime="2020-03-11 18:20">
             <span class="d-card__highlight">11/03/2020</span> 18:30 - 21:00
-          </div>
+          </time>
         </div>
         <div class="d-card__meet-detail">
           <%= external_icon "icons/solid/map-marker-alt.svg", role: "img", "aria-hidden": true %>
