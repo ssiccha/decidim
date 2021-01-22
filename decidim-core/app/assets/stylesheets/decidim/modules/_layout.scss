@@ -25,6 +25,21 @@
   }
 }
 
+.wrapper-sides{
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include breakpoint(medium){
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @include breakpoint(large){
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
 .wrapper--inner{
   background: $light-gray-dark;
   padding-top: 1rem;
