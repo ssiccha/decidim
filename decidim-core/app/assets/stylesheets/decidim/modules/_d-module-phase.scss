@@ -1,0 +1,26 @@
+.d-module-phase{
+  background: $white;
+  padding: $global-padding;
+  margin: $global-margin 0;
+  border-radius: $global-radius;
+  max-width: 20rem;
+
+  .button{
+    margin-top: $global-margin * .75;
+    margin-bottom: 0;
+  }
+
+  &__date{
+    color: $primary-color;
+    margin-bottom: 0;
+
+    @include smallcaps($size: .8em);
+  }
+
+  &__phase-title{
+    display: block;
+    font-weight: $global-weight-bold;
+    font-size: rem-calc(18);
+    line-height: 1;
+  }
+}
