@@ -1,0 +1,52 @@
+// D-cards are a redesign of the previous Decidim cards
+$muted: #767676;
+
+$d-stats-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+$d-stats-bg: #fff;
+$d-stats-radius: 4px;
+$d-stats-padding: 1rem;
+$d-stats-width: 200px;
+$d-stats-icon-color: $primary;
+$d-stats-icon-bg: rgba($primary, .2);
+
+.d-stats{
+  display: flex;
+  align-items: center;
+  background: $d-stats-bg;
+  border-radius: $d-stats-radius;
+  box-shadow: $d-stats-shadow;
+  padding: $d-stats-padding;
+  margin: 0 1.5rem 1rem 0;
+  min-width: $d-stats-width;
+
+  &-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__icon{
+    color: $d-stats-icon-color;
+    background-color: $d-stats-icon-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 32px;
+    margin-right: 1rem;
+  }
+
+  &__title{
+    color: $primary-color;
+    margin-bottom: 0;
+
+    @include smallcaps($size: .8em);
+  }
+
+  &__number{
+    font-weight: 900;
+    font-size: 2.25rem;
+    line-height: 1;
+  }
+}

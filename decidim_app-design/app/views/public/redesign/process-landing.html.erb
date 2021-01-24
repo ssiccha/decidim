@@ -42,12 +42,15 @@
     <div class="section">
       <div class="row column">
         <h2 class="section-heading">Stats</h2>
-      </div>
-      <div class="row small-up-1 medium-up-2 mediumlarge-up-2 large-up-3 card-grid">
-        <div class="column">
-          <%= partial "d_stats" %>
+        <div class="d-stats-wrapper">
+          <%= partial "d_stats", locals: {icon: "user-friends", title: "Participants", number: 13} %>
+          <%= partial "d_stats", locals: {icon: "user-plus", title: "Followers", number: 125} %>
+          <%= partial "d_stats", locals: {icon: "highlighter", title: "Proposals", number: 89} %>
+          <%= partial "d_stats", locals: {icon: "map-marker-alt", title: "Meetings", number: 15} %>
+          <%= partial "d_stats", locals: {icon: "question", title: "Answers", number: 21} %>
         </div>
       </div>
+
     </div>
 
   </div>

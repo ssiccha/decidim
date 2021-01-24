@@ -1,1 +1,13 @@
-(stats)
+<% locals ||= {} %>
+<% @icon = "icons/solid/" + locals[:icon] + ".svg" %>
+
+<article class="d-stats">
+  <div class="d-stats__icon">
+    <%= external_icon @icon, role: "img", "aria-hidden": true %>
+  </div>
+  <div class="d-stats__text">
+    <h5 class="d-stats__title"><%= locals[:title] %></h5>
+    <div class="d-stats__number"><%= locals[:number] %></div>
+  <div>
+
+</article>
