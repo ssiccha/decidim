@@ -28,6 +28,22 @@
     border-radius: $global-radius;
   }
 
+  &__top{
+    display: flex;
+  }
+
+  &__top-main{
+    flex-grow: 1;
+  }
+
+  &__bottom{
+    display: flex;
+  }
+
+  &__bottom-main{
+    flex-grow: 1;
+  }
+
   &__hashtag{
     font-weight: 600;
 

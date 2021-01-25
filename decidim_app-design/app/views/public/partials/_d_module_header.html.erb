@@ -5,17 +5,30 @@
         <img src="<%= image_path "barcelona-hero.jpg" %>" alt="" />
       </div>
       <div class="d-module-header__main">
-        <h1 class="heading2">
-          Plan de acción del Pou de la Figuera
-        </h1>
-        <h2 class="heading-small">
-          <span class="d-module-header__hashtag">
-            <a href="#">#urbaGracia</a>
-          </span>
-          Proceso de mejoras del barrio de Gracia
-        </h2>
-
-        <%= partial "d_module_nav" %>
+        <div class="d-module-header__top">
+          <div class="d-module-header__top-main">
+            <h1 class="heading2">
+              Plan de acción del Pou de la Figuera
+            </h1>
+            <h2 class="heading-small">
+              <span class="d-module-header__hashtag">
+                <a href="#">#urbaGracia</a>
+              </span>
+              Proceso de mejoras del barrio de Gracia
+            </h2>
+          </div>
+          <div class="d-module-header__top-side">
+            Follow
+          </div>
+        </div>
+        <div class="d-module-header__bottom">
+          <div class="d-module-header__bottom-main">
+            <%= partial "d_module_nav" %>
+          </div>
+          <div class="d-module-header__bottom-side">
+            <%= partial "d_module_shareinfo" %>
+          </div>
+        </div>
 
       </div>
     </div>
