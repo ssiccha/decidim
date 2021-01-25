@@ -1,0 +1,17 @@
+$d-techdata-bg: #edf2f7;
+
+.d-techdata{
+  background: $d-techdata-bg;
+  border-radius: $d-card-radius;
+  padding: $d-card-padding;
+  margin-bottom: .3rem;
+
+  &__title{
+    margin-bottom: 0;
+
+    @include smallcaps($size: 1em);
+  }
+
+  &__desc{
+  }
+}

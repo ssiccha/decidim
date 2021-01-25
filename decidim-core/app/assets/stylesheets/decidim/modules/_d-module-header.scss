@@ -6,6 +6,18 @@
     margin-right: -2rem;
     max-height: 200px;
     overflow: hidden;
+    border-radius: $global-radius;
+    position: relative;
+
+    &::after{
+      content: "";
+      background-color: rgba(black, .05);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
   }
 
   &__main{

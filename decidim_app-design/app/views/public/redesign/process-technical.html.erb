@@ -12,11 +12,29 @@
     <div class="section">
       <div class="row column">
         <h2 class="section-heading">Technical data</h2>
+        <div class="row">
+            <div class="columns mediumlarge-10 large-8">
+              <%= partial "d_techdata", locals: {title: "Qué se decide", desc: "El conjunt d’accions que es duran a terme en el marc del Pla d’actuació."} %>
+              <%= partial "d_techdata", locals: {title: "Quién participa", desc: "Veïns i veïnes, comerciants, equipaments i serveis del barri."} %>
+              <%= partial "d_techdata", locals: {title: "Cómo se decide", desc: "A través de la recollida de propostes per incloure al pla, que seran validades pel barri"} %>
+              <%= partial "d_techdata", locals: {title: "Ámbito", desc: "Barri de Sant Pere, Santa Caterina i la Ribera"} %>
+              <%= partial "d_techdata", locals: {title: "Área de organización", desc: "Foment de Ciutat i Districte de Ciutat Vella"} %>
+              <%= partial "d_techdata", locals: {title: "Grupo promotor", desc: "Ajuntament de Barcelona"} %>
+              <%= partial "d_techdata", locals: {title: "Fecha de inicio", desc: "13 de octubre de 2020"} %>
+              <%= partial "d_techdata", locals: {title: "Fecha de finalización", desc: "28 de febrero de 2021"} %>
+              <%= partial "d_techdata", locals: {title: "Referencia", desc: "BCN-PART-2020-10-119"} %>
+            </div>
+        </div>
       </div>
     </div>
     <div class="section">
       <div class="row column">
         <h2 class="section-heading">Related documents</h2>
+        <div class="row">
+            <div class="columns mediumlarge-10 large-8">
+              <%= partial "d_docs" %>
+            </div>
+        </div>
       </div>
     </div>
 
