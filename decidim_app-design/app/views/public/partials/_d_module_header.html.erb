@@ -6,32 +6,28 @@
       </div>
       <div class="d-module-header__main">
         <div class="d-module-header__top">
-          <div class="d-module-header__top-main">
-            <h1 class="heading2">
-              Plan de acción del Pou de la Figuera
-            </h1>
-            <h2 class="heading-small">
-              <span class="d-module-header__hashtag">
-                <a href="#">#urbaGracia</a>
-              </span>
-              Proceso de mejoras del barrio de Gracia
-            </h2>
-          </div>
-          <div class="d-module-header__top-side">
+          <h1 class="heading2">
+            Plan de acción del Pou de la Figuera
+          </h1>
+          <h2 class="heading-small">
+            <span class="d-module-header__hashtag">
+              <a href="#">#urbaGracia</a>
+            </span>
+            Proceso de mejoras del barrio de Gracia
+          </h2>
+        </div>
+        <div class="d-module-header__side">
+          <div class="d-module-header__follow">
             <button class="button hollow small button--sc button--icon button--nomargin">
               <%= external_icon "icons/solid/user-plus.svg", role: "img", "aria-hidden": true %>
               Follow
             </button>
             <div class="d-module-header__follow-label">345 followers</div>
           </div>
+          <%= partial "d_module_shareinfo" %>
         </div>
         <div class="d-module-header__bottom">
-          <div class="d-module-header__bottom-main">
-            <%= partial "d_module_nav" %>
-          </div>
-          <div class="d-module-header__bottom-side">
-            <%= partial "d_module_shareinfo" %>
-          </div>
+          <%= partial "d_module_nav" %>
         </div>
 
       </div>

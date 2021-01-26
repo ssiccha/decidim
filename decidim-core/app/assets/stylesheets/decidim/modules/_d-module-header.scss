@@ -26,26 +26,47 @@
     background-color: white;
     padding: $global-padding $global-padding 0 $global-padding;
     border-radius: $global-radius;
+
+    @include breakpoint(mediumlarge){
+      display: grid;
+      grid-template:
+        "top side"
+        "bottom side";
+    }
   }
 
   &__top{
+    .heading-small{
+      line-height: 1.2;
+    }
+
+    @include breakpoint(mediumlarge){
+      grid-area: top;
+    }
+  }
+
+  &__side{
     display: flex;
-  }
+    align-items: flex-start;
+    margin-bottom: 1rem;
 
-  &__top-main{
-    flex-grow: 1;
-  }
-
-  &__top-side{
-    text-align: right;
+    @include breakpoint(mediumlarge){
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+      margin-bottom: 0;
+      grid-area: side;
+    }
   }
 
   &__bottom{
     display: flex;
-  }
+    flex-direction: column;
 
-  &__bottom-main{
-    flex-grow: 1;
+    @include breakpoint(mediumlarge){
+      flex-direction: row;
+      grid-area: bottom;
+    }
   }
 
   &__icon{
@@ -60,10 +81,27 @@
     }
   }
 
+  &__follow{
+    margin-right: 1rem;
+
+    @include breakpoint(mediumlarge){
+      margin-right: 0;
+    }
+  }
+
   &__follow-label{
     color: $muted-light;
 
     @include smallcaps($size: .8em);
+  }
+
+  &__actions{
+    margin-top: .35rem;
+
+    @include breakpoint(mediumlarge){
+      margin-top: auto;
+      margin-bottom: .35rem;
+    }
   }
 
   &__hashtag{
@@ -71,8 +109,8 @@
 
     &::after{
       content: "·";
-      margin-left: .5rem;
-      margin-right: .5rem;
+      margin-left: .25rem;
+      margin-right: .25rem;
     }
   }
 }
