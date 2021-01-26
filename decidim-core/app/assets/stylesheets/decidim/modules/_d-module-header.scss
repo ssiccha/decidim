@@ -36,6 +36,10 @@
     flex-grow: 1;
   }
 
+  &__top-side{
+    text-align: right;
+  }
+
   &__bottom{
     display: flex;
   }
@@ -45,7 +49,7 @@
   }
 
   &__icon{
-    color: $muted;
+    color: $muted-light;
     font-size: 18px;
     margin-left: .35rem;
     cursor: pointer;
@@ -54,6 +58,12 @@
     &:focus{
       color: $secondary;
     }
+  }
+
+  &__follow-label{
+    color: $muted-light;
+
+    @include smallcaps($size: .8em);
   }
 
   &__hashtag{

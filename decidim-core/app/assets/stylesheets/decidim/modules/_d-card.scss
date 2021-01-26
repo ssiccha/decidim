@@ -1,16 +1,14 @@
 // D-cards are a redesign of the previous Decidim cards
-$muted: #767676;
-
 $d-card-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
 $d-card-bg: #fff;
 $d-card-radius: 4px;
 $d-card-padding: 1rem;
-$d-card-icon-color: lighten($muted, 30);
-$d-card-data-color: $muted;
+$d-card-icon-color: lighten($muted-warm, 30);
+$d-card-data-color: $muted-warm;
 $d-card-data-size: .75rem;
-$d-card-footer-color: $muted;
+$d-card-footer-color: $muted-warm;
 $d-card-footer-size: .875rem;
-$d-card-progress-foot-color: $muted;
+$d-card-progress-foot-color: $muted-warm;
 $d-card-text-size: .875rem;
 $d-card-tags-size: .875rem;
 $d-card-progress-size: .875rem;
