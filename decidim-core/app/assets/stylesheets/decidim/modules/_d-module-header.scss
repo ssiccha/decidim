@@ -44,6 +44,18 @@
     flex-grow: 1;
   }
 
+  &__icon{
+    color: $muted;
+    font-size: 18px;
+    margin-left: .35rem;
+    cursor: pointer;
+
+    &:hover,
+    &:focus{
+      color: $secondary;
+    }
+  }
+
   &__hashtag{
     font-weight: 600;
 

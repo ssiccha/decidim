@@ -15,8 +15,12 @@ $d-stats-icon-bg: rgba($primary, .2);
   border-radius: $d-stats-radius;
   box-shadow: $d-stats-shadow;
   padding: $d-stats-padding;
-  margin: 0 1.5rem 1rem 0;
+  margin: 0 1rem 1rem 0;
   min-width: $d-stats-width;
+
+  &:last-child{
+    margin-right: 0;
+  }
 
   &-wrapper{
     display: flex;
