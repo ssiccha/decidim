@@ -66,6 +66,7 @@
     @include breakpoint(mediumlarge){
       flex-direction: row;
       grid-area: bottom;
+      overflow: hidden;
     }
   }
 
@@ -100,7 +101,7 @@
 
     @include breakpoint(mediumlarge){
       margin-top: auto;
-      margin-bottom: .35rem;
+      margin-bottom: .5rem;
     }
   }
 

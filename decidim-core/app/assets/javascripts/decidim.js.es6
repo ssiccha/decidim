@@ -38,6 +38,8 @@
 // = require decidim/responsive_horizontal_tabs.js
 // = require decidim/geocoding/attach_input
 // = require decidim/security/selfxss_warning
+// = require decidim/module_nav_responsive
+
 
 // = require_self
 // = require decidim/configuration

@@ -38,19 +38,20 @@
       </li>
       <li>
         <%= link_to page_path("redesign/process-technical"), class: "d-module-nav__link #{'is-active' if @activepage == 'technical'}" do %>
-        <span>Technical data</span>
+        <span>Technical&nbsp;data</span>
         <% end %>
       </li>
     </ul>
-    <button class="button tiny d-module-nav__more" data-toggle="process-nav__hide-content">
+    <button class="button tiny d-module-nav__more" data-toggle="module-nav__hide-content">
       More
+      <%= external_icon "icons/solid/angle-down.svg", role: "img", "aria-hidden": true %>
     </button>
-    <div class="dropdown-pane d-module-nav__hidden-content" id="process-nav__hide-content"
+    <div class="dropdown-pane d-module-nav__hidden-content" id="module-nav__hide-content"
       data-dropdown
       data-hover="true"
       data-hover-pane="true"
       data-position="bottom"
-      data-alignment="right">
+      >
       <ul>
       </ul>
     </div>
