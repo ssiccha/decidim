@@ -1,0 +1,16 @@
+<% locals ||= {} %>
+
+<article class="d-document">
+  <div class="d-document__icon">
+    <%= external_icon "icons/solid/cloud-download-alt.svg", role: "img", "aria-hidden": true %>
+  </div>
+  <div>
+    <h3 class="h6 d-document__title">
+      <a href="#" class="d-document__main-link"><%= Faker::Movies::StarWars.quote[0..50] %></a>
+    </h3>
+    <div class="d-document__type">PDF, 537Kb</div>
+    <div class="d-document__desc">
+      <%= Faker::Movies::StarWars.quote[0..100] %>
+    </div>
+  </div>
+</article>

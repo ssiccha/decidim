@@ -32,7 +32,9 @@
         <h2 class="section-heading">Related documents</h2>
         <div class="row">
             <div class="columns mediumlarge-10 large-8">
-              <%= partial "d_docs" %>
+              <% 5.times do %>
+                <%= partial "d_document" %>
+              <% end %>
             </div>
         </div>
       </div>
