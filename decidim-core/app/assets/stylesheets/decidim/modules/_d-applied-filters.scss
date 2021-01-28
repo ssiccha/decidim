@@ -1,0 +1,30 @@
+$d-applied-filters-bg: $light-gray-darker;
+$d-applied-filters-text-size: .75rem;
+
+.d-applied-filters{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+
+  &__tag{
+    font-size: $d-applied-filters-text-size;
+    background-color: $d-applied-filters-bg;
+    color: $dark-gray;
+    border: 1px solid rgba(black, .1);
+    display: inline-flex;
+    align-items: center;
+    padding: .3em .5em;
+    margin-right: .5rem;
+    cursor: pointer;
+
+    .icon{
+      color: rgba(black, .5);
+      margin-left: .5em;
+    }
+
+    &:hover .icon{
+      color: $primary;
+    }
+  }
+}

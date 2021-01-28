@@ -1,27 +1,82 @@
 <div class="d-filters">
-  <label for="d-filters-search" class="show-for-sr">
-    Buscar propuesta
-  </label>
-  <div class="d-filters__search">
-    <input type="text" class="d-filters__search-input" placeholder="Buscar propuesta…" id="d-filters-search">
-    <button type="button" aria-label="Search" class="d-filters__search-button">
-      <%= external_icon "icons/solid/search.svg", role: "img", "aria-hidden": true %>
-    </button>
-  </div>
-  <button type="button" class="d-filters__advanced-button">
-    Búsqueda avanzada
-    <%= external_icon "icons/solid/chevron-down.svg", role: "img", "aria-hidden": true %>
-  </button>
-  <div class="d-filters__order">
-    <label for="d-filters-order">
-      Order by
+  <div class="d-filters__main">
+    <label for="d-filters-search" class="show-for-sr">
+      Search proposal
     </label>
-    <select id="d-filters-order">
-      <option seleted>Random</option>
-      <option>More active</option>
-      <option>Less active</option>
-      <option>More supports</option>
-      <option>Fewer supports</option>
-    </select>
+    <div class="d-filters__search">
+      <input type="text" class="d-filters__search-input" placeholder="Search proposal…" id="d-filters-search">
+      <button type="button" aria-label="Search" class="d-filters__search-button">
+        <%= external_icon "icons/solid/search.svg", role: "img", "aria-hidden": true %>
+      </button>
+    </div>
+    <button type="button" class="d-filters__advanced-button" data-toggle="advanced-filters">
+      Advanced search
+      <%= external_icon "icons/solid/chevron-down.svg", role: "img", "aria-hidden": true %>
+    </button>
+    <div class="d-filters__order">
+      <label for="d-filters-order">
+        Order by
+      </label>
+      <select id="d-filters-order">
+        <option seleted>Random</option>
+        <option>More active</option>
+        <option>Less active</option>
+        <option>More supports</option>
+        <option>Fewer supports</option>
+      </select>
+    </div>
   </div>
+  <div class="d-filters__advanced is-hidden" id="advanced-filters" data-toggler="is-hidden">
+    <div class="d-filters__advanced-filter">
+      <label for="d-adv-1">
+        Area
+      </label>
+      <select id="d-adv-1">
+        <option seleted>All</option>
+        <option>Lorem ipsum</option>
+        <option>Dolor sit amet</option>
+      </select>
+    </div>
+    <div class="d-filters__advanced-filter">
+      <label for="d-adv-2">
+        Topic
+      </label>
+      <select id="d-adv-2">
+        <option seleted>All</option>
+        <option>Lorem ipsum</option>
+        <option>Dolor sit amet</option>
+      </select>
+    </div>
+    <div class="d-filters__advanced-filter">
+      <label for="d-adv-3">
+        Source
+      </label>
+      <select id="d-adv-3">
+        <option seleted>All</option>
+        <option>Lorem ipsum</option>
+        <option>Dolor sit amet</option>
+      </select>
+    </div>
+    <div class="d-filters__advanced-filter">
+      <label for="d-adv-2">
+        Related with
+      </label>
+      <select id="d-adv-2">
+        <option seleted>All</option>
+        <option>Lorem ipsum</option>
+        <option>Dolor sit amet</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="d-applied-filters">
+  <button class="d-applied-filters__tag" aria-label="Remove selection">
+    Eixample
+    <%= external_icon "icons/solid/times.svg", role: "img", "aria-hidden": true %>
+  </button>
+  <button class="d-applied-filters__tag" aria-label="Remove selection">
+    Ajuntament
+    <%= external_icon "icons/solid/times.svg", role: "img", "aria-hidden": true %>
+  </button>
 </div>

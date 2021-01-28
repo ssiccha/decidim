@@ -1,25 +1,49 @@
 $d-filters-radius: 4px;
-$d-filters-padding: .75rem;
+$d-filters-padding-sm: .25rem;
+$d-filters-padding-md: .5rem;
+$d-filters-padding-lg: .75rem;
+$d-filters-padding: .25rem .75rem;
+$d-filters-inner-padding: .5rem;
 $d-filters-bg: $light-gray-darker;
 $d-filters-field-height: 1.8rem;
 
 .d-filters{
   background-color: $d-filters-bg;
-  padding: $d-filters-padding;
+  padding: $d-filters-padding-lg;
   border-radius: $d-filters-radius;
   margin-bottom: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
+
+  @include breakpoint(medium){
+    padding: $d-filters-padding-sm $d-filters-padding-lg;
+  }
+
+  &__main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include breakpoint(medium){
+      align-items: center;
+      flex-direction: row;
+    }
+  }
 
   &__search{
     position: relative;
+
+    @include breakpoint(medium){
+      margin-right: 1rem;
+    }
   }
 
   &__search-input{
-    max-width: 14rem;
     margin-bottom: 0;
     height: $d-filters-field-height;
     padding-right: 3rem;
+
+    @include breakpoint(medium){
+      max-width: 14rem;
+    }
   }
 
   &__search-button{
@@ -41,9 +65,10 @@ $d-filters-field-height: 1.8rem;
   }
 
   &__order{
-    margin-left: auto;
     display: flex;
     align-items: baseline;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 
     label{
       white-space: nowrap;
@@ -56,18 +81,54 @@ $d-filters-field-height: 1.8rem;
     }
   }
 
-  &__advanced-button{
+  &__advanced-button,
+  &__advanced-button[data-toggle]{
     font-size: $small-font-size;
     display: flex;
     align-self: center;
     align-items: baseline;
-    margin-left: 1rem;
     font-weight: 600;
     cursor: pointer;
+    order: 1;
+    margin: 0;
+    margin-right: auto;
+
+    @include breakpoint (medium){
+      order: 0;
+    }
 
     svg{
       font-size: .6em;
       margin-left: .3em;
+    }
+  }
+
+  &__advanced{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: $d-filters-inner-padding;
+    padding-top: $d-filters-inner-padding;
+    padding-bottom: $d-filters-inner-padding;
+    border-top: 1px solid rgba(black, .1);
+
+    @include breakpoint(medium){
+      flex-direction: row;
+    }
+  }
+
+  &__advanced-filter{
+    @include breakpoint(medium){
+      margin-right: 1rem;
+    }
+
+    label{
+      display: block;
+    }
+
+    select{
+      margin-bottom: 0;
+      height: $d-filters-field-height;
     }
   }
 }
