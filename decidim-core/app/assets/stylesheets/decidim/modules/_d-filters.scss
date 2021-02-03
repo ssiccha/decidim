@@ -107,13 +107,13 @@ $d-filters-field-height: 1.8rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-top: $d-filters-inner-padding;
-    padding-top: $d-filters-inner-padding;
-    padding-bottom: $d-filters-inner-padding;
+    margin-top: $d-filters-padding-sm;
+    padding-top: $d-filters-padding-lg;
     border-top: 1px solid rgba(black, .1);
 
     @include breakpoint(medium){
       flex-direction: row;
+      padding-bottom: $d-filters-inner-padding;
     }
   }
 
@@ -129,6 +129,28 @@ $d-filters-field-height: 1.8rem;
     select{
       margin-bottom: 0;
       height: $d-filters-field-height;
+    }
+  }
+
+  &__advanced-toggle{
+    margin: 0;
+    text-align: left;
+
+    @extend select;
+
+    &.hover{
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &__dropdown-pane{
+    width: auto;
+    min-width: 150px;
+    position: absolute !important;
+
+    @include breakpoint(medium down){
+      position: static !important;
     }
   }
 }
