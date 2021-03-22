@@ -7,7 +7,7 @@ module Decidim
   module Paginable
     extend ActiveSupport::Concern
 
-    OPTIONS = [20, 50, 100].freeze
+    OPTIONS = [10, 20].freeze
 
     included do
       helper_method :per_page, :page_offset
@@ -18,7 +18,11 @@ module Decidim
       end
 
       def per_page
-        params[:per_page] || OPTIONS.first
+        if OPTIONS.include?(params[:per_page])
+          params[:per_page]
+        else
+          OPTIONS.first
+        end
       end
 
       def page_offset
